@@ -1,165 +1,165 @@
 <!doctype html>
-<html lang="vi">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
-  <meta name="description" content="Hồ sơ trưng bày news-brief — Agent tổng hợp tin tức đa nguồn, có nguồn dẫn và trạng thái xác minh.">
+  <meta name="description" content="news-brief 多源新闻简报 Agent 展示页：了解它的工作流程、核验标准与能力边界。">
   <meta name="theme-color" content="#101a18">
-  <title>news-brief — Agent tổng hợp bản tin đa nguồn</title>
+  <title>news-brief — 多源新闻简报 Agent</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./layout.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+  <a class="skip-link" href="#main">跳至正文</a>
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="news-brief, đầu trang">
+    <a class="brand" href="#top" aria-label="news-brief，返回顶部">
       <span class="brand-mark" aria-hidden="true">nb<span>·</span></span>
-      <span class="brand-name">news-brief<span> / agent profile</span></span>
+      <span class="brand-name">news-brief<span> / Agent 档案</span></span>
     </a>
-    <nav aria-label="Điều hướng chính">
-      <a href="#overview">Tổng quan</a>
-      <a href="#workflow">Quy trình</a>
-      <a href="#example">Bản tin mẫu</a>
-      <a href="#boundaries">Giới hạn</a>
+    <nav aria-label="主导航">
+      <a href="#overview">概览</a>
+      <a href="#workflow">工作流程</a>
+      <a href="#example">简报示例</a>
+      <a href="#boundaries">能力边界</a>
     </nav>
-    <span class="demo-chip"><span class="pulse"></span> BẢN TRƯNG BÀY TĨNH</span>
+    <span class="demo-chip"><span class="pulse"></span> 静态展示</span>
   </header>
 
   <main id="main">
     <section class="hero section-wrap" id="top">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> HỒ SƠ AI AGENT · 02.11.2026</p>
-        <h1>Tin quan trọng,<br><em>đã lọc và có nguồn.</em></h1>
-        <p class="hero-lede">news-brief thu thập tin từ báo chí, website, video và podcast; xác minh nguồn, chọn điểm đáng chú ý rồi biên tập thành bản tin ngắn, dễ kiểm chứng.</p>
+        <p class="eyebrow"><span class="eyebrow-line"></span> AI AGENT 档案 · 2026.11.02</p>
+        <h1>重要消息，<br><em>有据可查。</em></h1>
+        <p class="hero-lede">news-brief 汇集新闻、网站、视频与播客内容，核对来源与背景，筛选值得关注的进展，再整理成简洁、可追溯的新闻简报。</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#example">Xem bản tin mẫu <span aria-hidden="true">↘</span></a>
-          <a class="button button-quiet" href="#workflow">Khám phá cách làm <span aria-hidden="true">→</span></a>
+          <a class="button button-primary" href="#example">查看简报示例 <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="#workflow">了解工作方式 <span aria-hidden="true">→</span></a>
         </div>
-        <p class="hero-note"><span class="lock-icon" aria-hidden="true">◈</span> Chỉ xem mẫu có sẵn. Trang này không có ô chat và không thể gọi Agent.</p>
+        <p class="hero-note"><span class="lock-icon" aria-hidden="true">◈</span> 这里只展示预置内容；没有聊天入口，也不能调用 Agent。</p>
       </div>
 
-      <aside class="hero-card" aria-label="Tóm tắt Agent">
-        <div class="card-topline"><span>NEWSROOM / 001</span><span class="status-pill"><i></i> READ-ONLY DEMO</span></div>
+      <aside class="hero-card" aria-label="Agent 简介">
+        <div class="card-topline"><span>NEWSROOM / 001</span><span class="status-pill"><i></i> 只读演示</span></div>
         <div class="orbit" aria-hidden="true"><span class="orbit-core">nb</span><span class="orbit-node node-a">01</span><span class="orbit-node node-b">02</span><span class="orbit-node node-c">03</span></div>
-        <p class="card-kicker">VAI TRÒ</p>
-        <h2>Biên tập viên<br>tin đa nguồn</h2>
-        <p class="card-summary">Biến nhiều luồng thông tin thành một bản tin có cấu trúc, nguồn gốc và mức độ xác minh rõ ràng.</p>
-        <div class="card-footer"><span>ƯU TIÊN</span><span>Chính xác · Mới · Hữu ích</span></div>
+        <p class="card-kicker">角色定位</p>
+        <h2>多源新闻<br>编辑助手</h2>
+        <p class="card-summary">把分散的信息整理成结构清晰、出处明确、核验状态可见的简报。</p>
+        <div class="card-footer"><span>工作原则</span><span>准确 · 新近 · 有用</span></div>
       </aside>
       <div class="hero-index" aria-hidden="true">01 <span>/</span> 06</div>
     </section>
 
-    <section class="metrics section-wrap" id="overview" aria-label="Tóm tắt phạm vi">
-      <div class="metric"><span class="metric-value">04</span><span class="metric-label">nhóm chủ đề ưu tiên</span><small>Giáo dục · AI · Kinh tế · Xã hội</small></div>
-      <div class="metric"><span class="metric-value">2–4</span><span class="metric-label">nguồn tiêu biểu / sự kiện</span><small>Ưu tiên tính độc lập, không đếm bài đăng lại</small></div>
-      <div class="metric metric-status"><span class="metric-value">Lark</span><span class="metric-label">đang thử nghiệm kết nối</span><small>Gateway đã kết nối; chiều nhận DM đang kiểm tra</small></div>
-      <div class="metric metric-status"><span class="metric-value">07:00</span><span class="metric-label">lịch mong muốn</span><small>Chưa cài lịch tự động; không phải trạng thái đang chạy</small></div>
+    <section class="metrics section-wrap" id="overview" aria-label="Agent 概况">
+      <div class="metric"><span class="metric-value">04</span><span class="metric-label">重点主题</span><small>教育 · AI · 经济 · 社会</small></div>
+      <div class="metric"><span class="metric-value">2–4</span><span class="metric-label">每条新闻的代表性来源</span><small>看重来源独立性，不把转载当作多方证实</small></div>
+      <div class="metric metric-status"><span class="metric-value">Lark</span><span class="metric-label">连接仍在验证</span><small>Gateway 已连接；私聊接收仍待复测</small></div>
+      <div class="metric metric-status"><span class="metric-value">07:00</span><span class="metric-label">期望发送时间</span><small>尚未设置自动定时发送</small></div>
     </section>
 
-    <section class="effort section-wrap" aria-label="Ước tính thời gian">
-      <div class="effort-number">~170<span> phút</span></div>
-      <div><b>Ước tính quy trình thủ công cho một lượt tổng hợp</b><p>Con số theo mô tả của người dùng; thời gian chạy Agent và mức tiết kiệm thực tế chưa được đo bằng các lượt chạy đối chứng.</p></div>
-      <span class="effort-stamp">ƯỚC TÍNH<br>CHƯA ĐO ĐỐI CHỨNG</span>
+    <section class="effort section-wrap" aria-label="人工流程时间估算">
+      <div class="effort-number">约 170<span> 分钟</span></div>
+      <div><b>人工完成一轮新闻汇总的估算时间</b><p>此数字来自用户描述；Agent 的实际运行时间与节省幅度尚未通过对照测试测量。</p></div>
+      <span class="effort-stamp">估算值<br>未经对照测量</span>
     </section>
 
     <section class="intro section-wrap section-pad">
       <div class="section-heading">
-        <p class="eyebrow">01 / TỔNG QUAN</p>
-        <h2>Một đầu mối cho<br><em>nhiều nguồn tin.</em></h2>
+        <p class="eyebrow">01 / 概览</p>
+        <h2>让多路信息，<br><em>汇成一份简报。</em></h2>
       </div>
       <div class="intro-body">
-        <p>Agent hướng tới việc giúp người đọc nắm được chuyện gì xảy ra, vì sao đáng chú ý và có thể kiểm tra ở đâu — mà không phải mở từng bài báo hay nghe toàn bộ nội dung dài.</p>
-        <p class="muted">Mỗi tin được gắn chủ đề, thời điểm đăng, nguồn gốc và trạng thái xác minh. Tin khẩn cấp chưa đủ căn cứ được tách riêng, không trình bày như sự thật đã xác nhận.</p>
+        <p>帮助读者快速了解发生了什么、为何值得关注，以及可以去哪里核对，而不必逐篇打开报道或听完整段长音频。</p>
+        <p class="muted">每条新闻标注主题、发布时间、原始出处与核验状态。证据不足的紧急消息会单独标记，不会被写成已确认事实。</p>
       </div>
     </section>
 
-    <section class="toolstrip section-wrap" aria-label="Công cụ trong quy trình">
-      <div class="toolstrip-label">BỘ CÔNG CỤ</div>
-      <div class="tool"><span class="tool-icon hermes-icon">H</span><span><b>Hermes Agent</b><small>Chạy profile và điều phối quy trình</small></span></div>
-      <div class="tool"><span class="tool-icon lark-icon">L</span><span><b>Lark Bot + CLI</b><small>Kênh tin nhắn và giao nhận</small></span></div>
-      <div class="tool"><span class="tool-icon web-icon">↗</span><span><b>Công cụ web</b><small>Tìm, đọc và đối chiếu nguồn mở</small></span></div>
-      <div class="tool"><span class="tool-icon codex-icon">C</span><span><b>Codex</b><small>Thiết kế profile và trang trưng bày</small></span></div>
+    <section class="toolstrip section-wrap" aria-label="工作流程涉及的工具">
+      <div class="toolstrip-label">工作工具</div>
+      <div class="tool"><span class="tool-icon hermes-icon">H</span><span><b>Hermes Agent</b><small>运行 Profile 并协调流程</small></span></div>
+      <div class="tool"><span class="tool-icon lark-icon">L</span><span><b>Lark Bot + CLI</b><small>消息接收与交付通道</small></span></div>
+      <div class="tool"><span class="tool-icon web-icon">↗</span><span><b>网页检索工具</b><small>查找、阅读并比对公开来源</small></span></div>
+      <div class="tool"><span class="tool-icon codex-icon">C</span><span><b>Codex</b><small>设计 Profile 与展示页面</small></span></div>
     </section>
 
     <section class="io-section section-wrap section-pad" id="inputs-outputs">
       <div class="section-heading">
-        <p class="eyebrow">02 / ĐẦU VÀO & ĐẦU RA</p>
-        <h2>Đầu vào đa dạng.<br><em>Đầu ra có thể kiểm tra.</em></h2>
+        <p class="eyebrow">02 / 输入与输出</p>
+        <h2>输入形式多样，<br><em>结果有迹可循。</em></h2>
       </div>
       <div class="io-grid">
-        <article class="io-card"><span class="io-index">IN / 01</span><h3>Nguồn thông tin</h3><p>Báo điện tử, website, thông báo chính thức, YouTube, podcast, truyền hình và nội dung được gửi qua các nhóm Lark đã chọn.</p><div class="format-tags"><span>URL</span><span>HTML</span><span>PDF</span><span>MP3 / MP4</span><span>DOCX / PPTX</span></div></article>
-        <article class="io-card"><span class="io-index">OUT / 01</span><h3>Bản tin có cấu trúc</h3><p>Tiêu đề, tóm tắt, chủ đề, ngày đăng, thời điểm sự kiện, nguồn gốc, đường dẫn và trạng thái xác minh.</p><div class="format-tags"><span>Tin ngắn</span><span>Tổng kết tuần</span><span>Lark / văn bản</span></div></article>
-        <article class="io-card io-card-muted"><span class="io-index">TRIGGER / 01</span><h3>Trạng thái kích hoạt</h3><p>Profile Hermes và Lark Gateway đã có kết nối; DM gửi thử thành công. Lịch 07:00 / Chủ nhật 19:00 chưa được tạo, chiều nhận DM đang kiểm tra lại.</p><div class="format-tags"><span>Gateway: kết nối</span><span>Cron: chưa có</span></div></article>
+        <article class="io-card"><span class="io-index">IN / 01</span><h3>信息来源</h3><p>新闻网站、官方公告、YouTube、播客、电视新闻，以及用户选定的 Lark 学习群中分享的内容。</p><div class="format-tags"><span>网址</span><span>HTML</span><span>PDF</span><span>MP3 / MP4</span><span>DOCX / PPTX</span></div></article>
+        <article class="io-card"><span class="io-index">OUT / 01</span><h3>结构化简报</h3><p>标题、摘要、主题、发布时间、事件时间、原始来源、链接与核验状态。</p><div class="format-tags"><span>每日简报</span><span>每周回顾</span><span>Lark / 文本</span></div></article>
+        <article class="io-card io-card-muted"><span class="io-index">TRIGGER / 01</span><h3>当前运行状态</h3><p>Hermes Profile 与 Lark Gateway 已建立连接；曾完成私聊发送测试。每日 07:00 与周日 19:00 的定时任务尚未创建，私聊接收仍待复测。</p><div class="format-tags"><span>Gateway：已连接</span><span>定时任务：未创建</span></div></article>
       </div>
     </section>
 
     <section class="workflow section-wrap section-pad" id="workflow">
       <div class="section-heading">
-        <p class="eyebrow">03 / CÁCH AGENT LÀM VIỆC</p>
-        <h2>Từ tín hiệu<br><em>đến bản tin.</em></h2>
-        <p class="heading-note">Agent chọn lọc theo tác động và bằng chứng, không theo lượt xem.</p>
+        <p class="eyebrow">03 / 工作方式</p>
+        <h2>从信息线索，<br><em>到可信简报。</em></h2>
+        <p class="heading-note">依据影响力与证据筛选，不以浏览量决定重要性。</p>
       </div>
       <div class="steps">
-        <article class="step"><span class="step-no">01</span><div><h3>Tiếp nhận</h3><p>Nhận URL, bài báo, tài liệu hoặc nội dung âm thanh / video được cung cấp.</p><span class="step-tag">NGUỒN CÓ THỂ KIỂM TRA</span></div></article>
-        <article class="step"><span class="step-no">02</span><div><h3>Phân loại & xác minh</h3><p>Kiểm tra nguồn, ngày đăng, thời điểm sự kiện, bối cảnh và tính độc lập giữa các nguồn.</p><span class="step-tag">MUST · KHÔNG SUY ĐOÁN</span></div></article>
-        <article class="step"><span class="step-no">03</span><div><h3>Chọn tin đáng chú ý</h3><p>Xếp theo mức độ ảnh hưởng, độ mới, độ tin cậy và giá trị với người đọc; gộp tin trùng.</p><span class="step-tag">ƯU TIÊN CHẤT LƯỢNG</span></div></article>
-        <article class="step"><span class="step-no">04</span><div><h3>Biên tập & dẫn nguồn</h3><p>Tóm tắt sự kiện, chủ thể, thời gian, bằng chứng và tác động; gắn liên kết gốc và trạng thái.</p><span class="step-tag">CÓ THỂ TRUY XUẤT</span></div></article>
-        <article class="step"><span class="step-no">05</span><div><h3>Rà soát & giao nhận</h3><p>Kiểm tra chính xác, trung lập, trùng lặp và bố cục. Tin nhạy cảm hoặc mâu thuẫn sẽ chờ người xem.</p><span class="step-tag">CÓ ĐIỂM DỪNG AN TOÀN</span></div></article>
+        <article class="step"><span class="step-no">01</span><div><h3>接收内容</h3><p>读取网址、报道、文档，或用户提供的音频与视频内容。</p><span class="step-tag">来源可追溯</span></div></article>
+        <article class="step"><span class="step-no">02</span><div><h3>分类并核验</h3><p>检查来源、发布日期、事件发生时间、上下文及不同来源之间的独立性。</p><span class="step-tag">必须 · 不作猜测</span></div></article>
+        <article class="step"><span class="step-no">03</span><div><h3>筛选重要消息</h3><p>按影响、时效、可信度与读者价值排序，并合并重复报道。</p><span class="step-tag">质量优先</span></div></article>
+        <article class="step"><span class="step-no">04</span><div><h3>编辑并注明出处</h3><p>概括事件、相关主体、时间、证据与影响，附上原始链接和核验状态。</p><span class="step-tag">信息可追溯</span></div></article>
+        <article class="step"><span class="step-no">05</span><div><h3>复核并交付</h3><p>检查准确性、中立性、重复内容与版式；遇到敏感或矛盾消息时暂停并请求人工判断。</p><span class="step-tag">设有安全停点</span></div></article>
       </div>
     </section>
 
     <section class="sample-section" id="example">
       <div class="section-wrap sample-layout">
         <div class="sample-intro">
-          <p class="eyebrow">04 / MỘT LƯỢT CHẠY THỰC TẾ</p>
-          <h2>Bản tin mẫu,<br><em>không phải bản dựng.</em></h2>
-          <p>Ví dụ dưới đây được lấy từ một lượt chạy Hermes đã lưu. Nội dung được đối chiếu lại với liên kết gốc trước khi đưa lên trang.</p>
-          <button class="button button-light" id="source-toggle" type="button" aria-expanded="false" aria-controls="source-details">Xem nguồn đã đối chiếu <span aria-hidden="true">＋</span></button>
+          <p class="eyebrow">04 / 简报示例</p>
+          <h2>一份示例简报，<br><em>展示实际格式。</em></h2>
+          <p>以下内容来自已保存的 Hermes 运行记录，并在展示前对照了原始链接。示例仅用于说明输出结构。</p>
+          <button class="button button-light" id="source-toggle" type="button" aria-expanded="false" aria-controls="source-details">查看核对来源 <span aria-hidden="true">＋</span></button>
           <div class="source-details" id="source-details" hidden>
-            <a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener noreferrer">OpenAI · công bố ngày 26/10/2026 ↗</a>
-            <a href="https://www.axios.com/2026/10/28/ai-open-ai-token-prices" target="_blank" rel="noopener noreferrer">Axios · bài viết ngày 28/10/2026 ↗</a>
-            <small>Ngày sự kiện và ngày đăng bài được giữ riêng. Hai liên kết không được mặc định tính là hai xác nhận độc lập cho mọi chi tiết.</small>
+            <a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener noreferrer">OpenAI · 发布于 2026 年 10 月 26 日 ↗</a>
+            <a href="https://www.axios.com/2026/10/28/ai-open-ai-token-prices" target="_blank" rel="noopener noreferrer">Axios · 报道于 2026 年 10 月 28 日 ↗</a>
+            <small>事件日期与报道日期分别标注。两条链接不会自动被视为所有细节的两份独立证据。</small>
           </div>
         </div>
         <article class="brief-card">
-          <div class="brief-meta"><span class="topic-label"><i></i> CÔNG NGHỆ · AI</span><span>26 THÁNG 10, 2026</span></div>
-          <h3>OpenAI công bố GPT‑6.1 Terra, giảm giá API tiêu chuẩn 50%</h3>
-          <p class="brief-lede">OpenAI cho biết GPT‑6.1 Terra có giá API tiêu chuẩn thấp hơn 50% so với GPT‑5.6 Terra và GPT‑6.1 Sol.</p>
+          <div class="brief-meta"><span class="topic-label"><i></i> 科技 · AI</span><span>2026 年 10 月 26 日</span></div>
+          <h3>OpenAI 发布 GPT‑6.1 Terra，标准 API 价格降低 50%</h3>
+          <p class="brief-lede">OpenAI 表示，GPT‑6.1 Terra 的标准 API 价格比 GPT‑5.6 Terra 和 GPT‑6.1 Sol 低 50%。</p>
           <div class="brief-rule"></div>
-          <div class="brief-detail"><span class="detail-label">ĐIỂM ĐÁNG CHÚ Ý</span><p>OpenAI công bố mô hình ngày 26/10. Axios đăng bài ngày 28/10, đề cập mức giá thấp hơn đến một nửa và xu hướng giá token AI giảm.</p></div>
-          <div class="brief-bottom"><span class="verify-badge"><i></i> ĐÃ ĐỐI CHIẾU NGUỒN</span><span>2 liên kết tham khảo</span></div>
+          <div class="brief-detail"><span class="detail-label">要点</span><p>OpenAI 于 10 月 26 日公布该模型。Axios 于 10 月 28 日报道了最高减半的价格变化，以及 AI Token 价格下降趋势。</p></div>
+          <div class="brief-bottom"><span class="verify-badge"><i></i> 已对照来源</span><span>2 个参考链接</span></div>
           <div class="brief-sources"><a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener noreferrer">OpenAI ↗</a><a href="https://www.axios.com/2026/10/28/ai-open-ai-token-prices" target="_blank" rel="noopener noreferrer">Axios ↗</a></div>
         </article>
       </div>
-      <div class="sample-footnote section-wrap">MẪU ĐẦU RA TỪ HERMES · NGUỒN CÔNG KHAI · KHÔNG CHỨA NỘI DUNG LARK RIÊNG TƯ</div>
+      <div class="sample-footnote section-wrap">HERMES 输出示例 · 公开来源 · 不含 Lark 私聊内容</div>
     </section>
 
-    <section class="capabilities section-wrap section-pad">
+    <section class="capabilities section-wrap section-pad" id="boundaries">
       <div class="section-heading">
-        <p class="eyebrow">05 / PHẠM VI</p>
-        <h2>Biết Agent làm được gì<br><em>và khi nào cần dừng.</em></h2>
+        <p class="eyebrow">05 / 能力边界</p>
+        <h2>了解 Agent 能做什么，<br><em>以及何时需要暂停。</em></h2>
       </div>
       <div class="cap-grid">
-        <article class="cap-card cap-positive"><div class="cap-symbol">✓</div><h3>Agent hướng tới</h3><ul><li>Tổng hợp tin theo giáo dục, công nghệ – AI, kinh tế, xã hội và thời sự.</li><li>Giữ liên kết gốc, thời điểm đăng và trạng thái xác minh.</li><li>Nhận diện tin trùng, nguồn dẫn lại và thông tin mâu thuẫn.</li><li>Đưa tin khẩn chưa xác minh vào mục riêng, có cảnh báo rõ.</li></ul></article>
-        <article class="cap-card cap-limit"><div class="cap-symbol">!</div><h3>Giới hạn hiện tại</h3><ul><li>Không đảm bảo đọc được nội dung sau đăng nhập, paywall hoặc mọi nền tảng.</li><li>Phiên âm và phân tích video chưa được kiểm chứng đầy đủ.</li><li>Nhận DM vừa phát hiện lệch ID và đang thử lại; chưa có xác nhận thành công sau khi sửa.</li><li>Chưa có lịch tự gửi 07:00 / Chủ nhật 19:00.</li></ul></article>
-        <article class="cap-card cap-protect"><div class="cap-symbol">⛨</div><h3>Ranh giới an toàn</h3><ul><li>Không bịa dữ kiện, số liệu, phát biểu hoặc nguồn.</li><li>Không biến suy đoán, dự báo hay tin chưa xác minh thành sự thật.</li><li>Không xử lý nhóm Lark nào cho đến khi nhóm được chọn và cấu hình.</li><li>Không có khóa, quyền, dữ liệu riêng tư hay đường gọi vào Agent trong trang này.</li></ul></article>
+        <article class="cap-card cap-positive"><div class="cap-symbol">✓</div><h3>设计目标</h3><ul><li>汇总教育、科技与 AI、经济、社会及时事新闻。</li><li>保留原始链接、发布时间与核验状态。</li><li>识别重复报道、转引来源与相互矛盾的信息。</li><li>将未核实的紧急消息单独标注并明确提示。</li></ul></article>
+        <article class="cap-card cap-limit"><div class="cap-symbol">!</div><h3>当前限制</h3><ul><li>不保证能读取登录后、付费墙内或所有平台的内容。</li><li>音视频转写与分析能力尚未经过充分验证。</li><li>私聊接收曾发现 ID 不匹配；修正后仍待确认测试结果。</li><li>每日 07:00 与周日 19:00 的自动发送任务尚未设置。</li></ul></article>
+        <article class="cap-card cap-protect"><div class="cap-symbol">⛨</div><h3>安全边界</h3><ul><li>不编造事实、数据、引述或来源。</li><li>不把推测、预测或未核实消息写成事实。</li><li>未被选定并配置的 Lark 群组不会纳入处理。</li><li>本页面不包含密钥、权限、私密数据，也没有调用 Agent 的接口。</li></ul></article>
       </div>
     </section>
 
     <section class="activation section-wrap">
       <div class="activation-mark">nb<span>·</span></div>
-      <div><p class="eyebrow">06 / CÁCH KÍCH HOẠT BẢN THẬT</p><h2>Trang này để xem.<br><em>Agent thật chạy riêng.</em></h2><p>news-brief hiện được vận hành trong profile Hermes. Bản trưng bày này không có đầu vào tự do, không chuyển tiếp yêu cầu và không kết nối tới profile đó.</p></div>
-      <div class="activation-side"><span class="read-only-label"><i></i> CHỈ ĐỌC</span><small>Nút bấm trên trang chỉ mở nội dung tĩnh có sẵn.</small><small>Để nhận bản tin thật, cần cấu hình profile, lịch và kênh Lark riêng.</small></div>
+      <div><p class="eyebrow">06 / 如何使用真实 Agent</p><h2>此页面用于了解。<br><em>Agent 在独立环境运行。</em></h2><p>news-brief 在 Hermes Profile 中独立运行。本展示页没有自由输入框，不会转发请求，也不会连接到该 Profile。</p></div>
+      <div class="activation-side"><span class="read-only-label"><i></i> 只读展示</span><small>页面按钮只展开预置的静态内容。</small><small>真实简报需要另外配置 Profile、定时任务与 Lark 通道。</small></div>
     </section>
   </main>
 
   <footer class="footer section-wrap">
-    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">nb<span>·</span></span><span class="brand-name">news-brief<span> / agent profile</span></span></a>
-    <p>Hồ sơ trưng bày công khai · Bản xem mẫu tĩnh · Cập nhật 02.11.2026</p>
-    <a class="back-top" href="#top">Lên đầu trang ↑</a>
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">nb<span>·</span></span><span class="brand-name">news-brief<span> / Agent 档案</span></span></a>
+    <p>公开展示档案 · 静态演示 · 更新于 2026.11.02</p>
+    <a class="back-top" href="#top">返回顶部 ↑</a>
   </footer>
-  <noscript><p class="noscript">Trang vẫn đọc được khi tắt JavaScript; các nút mở nguồn cần JavaScript bật.</p></noscript>
+  <noscript><p class="noscript">关闭 JavaScript 后仍可阅读页面；查看来源按钮需要启用 JavaScript。</p></noscript>
 </body>
 </html>

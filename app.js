@@ -6,6 +6,6 @@ sourceToggle?.addEventListener('click', () => {
   sourceToggle.setAttribute('aria-expanded', String(!isExpanded));
   sourceDetails.hidden = isExpanded;
   sourceToggle.innerHTML = isExpanded
-    ? 'Xem nguồn đã đối chiếu <span aria-hidden="true">＋</span>'
-    : 'Ẩn nguồn tham khảo <span aria-hidden="true">−</span>';
+    ? '查看核对来源 <span aria-hidden="true">＋</span>'
+    : '收起参考来源 <span aria-hidden="true">−</span>';
 });

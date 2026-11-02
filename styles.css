@@ -3,3 +3,32 @@
 @media(max-width:900px){.topbar nav{gap:14px}.demo-chip{display:none}.hero{gap:40px}.metrics{grid-template-columns:repeat(2,1fr);gap:20px}.metric:nth-child(2){border-right:0}.metric:nth-child(3){padding-left:4px}.intro,.workflow{gap:55px}.toolstrip{grid-template-columns:repeat(2,1fr)}.toolstrip-label{grid-column:1/-1}.sample-layout{gap:45px}.activation{grid-template-columns:65px 1fr}.activation-side{grid-column:2;border-left:0;border-top:1px solid var(--line);padding:18px 0 0}}
 @media(max-width:640px){.section-wrap{width:calc(100% - 36px)}.section-pad{padding-block:72px}.topbar{height:64px;padding-inline:18px}.topbar nav{display:none}.brand-name span{display:none}.hero{grid-template-columns:1fr;gap:40px;padding-block:64px 70px}.hero h1{font-size:54px}.hero-lede{font-size:14px}.hero-card{max-width:420px;width:100%;justify-self:center}.hero-index{bottom:22px}.metrics{padding:21px 18px;gap:18px 12px}.metric{padding:0 0 0 10px;grid-template-columns:auto 1fr;column-gap:8px}.metric-value{font-size:25px}.metric-label{font-size:9px}.metric small{font-size:8px}.intro,.workflow{grid-template-columns:1fr;gap:25px}.intro-body{padding-top:0}.intro-body p{font-size:14px}.toolstrip{gap:17px 10px}.tool{gap:8px}.tool small{font-size:7px}.sample-section{padding-top:70px}.sample-layout{grid-template-columns:1fr;gap:34px}.brief-card{padding:24px 21px}.brief-meta{font-size:7px}.brief-card h3{font-size:27px}.cap-grid{grid-template-columns:1fr;margin-top:30px}.cap-card{min-height:0}.activation{grid-template-columns:52px 1fr;gap:17px;padding-block:47px}.activation-mark{width:48px;height:48px;font-size:29px;border-radius:13px}.activation h2{font-size:28px}.activation-side{grid-column:1/-1;padding-left:0}.footer{padding-block:23px;display:grid;grid-template-columns:1fr auto}.footer p{grid-column:1/-1;grid-row:2;margin:0}.footer .brand{grid-column:1;grid-row:1}.back-top{grid-column:2;grid-row:1}.sample-footnote{font-size:7px;line-height:1.7}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Simplified Chinese typography: prioritize installed CJK families and avoid
+   the tight Latin tracking that makes Han characters look crowded. */
+:root{--serif:"Noto Serif SC","Songti SC","SimSun","Microsoft YaHei",serif;--sans:"Microsoft YaHei UI","Microsoft YaHei","Noto Sans SC","PingFang SC",system-ui,sans-serif}
+body{font-family:var(--sans);line-height:1.78;letter-spacing:.012em;font-synthesis:none}
+h1,h2,h3,p,a,button,small,li{word-break:normal;overflow-wrap:anywhere}
+.hero h1,.section-heading h2,.sample-intro h2,.activation h2{letter-spacing:.015em;line-height:1.22;font-weight:650}
+.hero h1 em,.section-heading h2 em,.sample-intro h2 em,.activation h2 em{letter-spacing:.025em;font-style:normal;font-weight:450}
+.hero h1{font-size:clamp(46px,5.7vw,70px)}
+.hero-lede,.intro-body p{line-height:1.95}
+.eyebrow,.demo-chip,.status-pill,.card-kicker,.card-footer,.toolstrip-label,.step-tag,.io-index,.brief-meta,.detail-label,.verify-badge,.sample-footnote,.effort-stamp,.read-only-label{letter-spacing:.07em}
+.hero-card h2,.brief-card h3,.io-card h3{font-family:var(--serif);letter-spacing:.015em;line-height:1.42}
+.brand-mark,.orbit-core,.metric-value,.effort-number,.step-no{font-family:var(--serif)}
+.topbar nav a{font-size:13px}
+.demo-chip{font-size:10px}
+.metric-label,.tool b,.step h3,.io-card h3,.cap-card h3{font-size:12px}
+.metric small,.tool small,.step p,.io-card p,.cap-card ul,.footer p,.back-top{font-size:11px}
+.brief-card h3{font-size:clamp(23px,2.7vw,32px)}
+.brief-lede{line-height:1.9}
+.brief-detail p{line-height:1.9}
+.hero-note{line-height:1.7}
+@media(max-width:640px){
+  .hero h1{font-size:clamp(42px,12vw,56px);line-height:1.24}
+  .hero-card h2{font-size:30px;line-height:1.35}
+  .section-heading h2,.sample-intro h2{line-height:1.3}
+  .brief-card h3{font-size:25px;line-height:1.45}
+  .metric small,.tool small{font-size:9px}
+  .cap-card ul,.step p,.io-card p{font-size:12px}
+}
