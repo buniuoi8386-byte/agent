@@ -12,6 +12,8 @@ body{margin:0;padding:48px 20px 72px;background:var(--paper);color:var(--ink);fo
 .page-header{padding-bottom:28px;border-bottom:1px solid var(--line)}
 .kicker{margin:0 0 12px;color:var(--green);font-size:11px;font-weight:750;letter-spacing:.12em}
 h1{margin:0;color:#183a29;font-size:clamp(34px,7vw,48px);line-height:1.25;letter-spacing:.01em;font-weight:750}
+.agent-title{display:flex;align-items:center;gap:15px}
+.agent-avatar{width:64px;height:64px;flex:none;object-fit:cover;object-position:center 34%;border-radius:50%;border:3px solid #e6efe7;box-shadow:0 3px 12px rgba(30,61,42,.14)}
 .subtitle{margin:5px 0 8px;font-size:21px;font-weight:650;color:#426550}
 .intro-line{margin:0;color:var(--muted);font-size:15px}
 .callout{margin:24px 0;padding:17px 20px;background:var(--green-soft);border-left:4px solid #6da37c;border-radius:8px}
@@ -52,6 +54,7 @@ code{padding:2px 6px;border-radius:5px;background:#eff3ef;color:#315640;font-fam
 @media(max-width:640px){
   body{padding:14px 10px 32px;font-size:14px}
   .document{padding:25px 19px;border-radius:13px}
+  .agent-avatar{width:54px;height:54px}
   .tool-list,.output-list{grid-template-columns:1fr}
   table{font-size:12px}
   th,td{padding:9px 8px}

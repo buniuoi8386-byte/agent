@@ -9,6 +9,7 @@ GitHub 仓库：https://github.com/buniuoi8386-byte/agent
 
 - `index.html`：中文说明内容。
 - `styles.css`、`layout.css`：页面样式与响应式排版，优先使用本机 CJK 字体。
+- `nguyet-bang-avatar.jpg`：用户提供并用于公开页面标题的 Agent 头像。
 - GitHub Pages 从 `main` 分支根目录发布，提交后会自动部署。
 
 ## 安全边界
