@@ -4,38 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
-  <meta name="description" content="Nguyệt Băng 多源新闻简报 Agent：查看它的工作方式、输入、输出、核验标准与能力边界。">
+  <meta name="description" content="两位独立 Hermes AI 助理：Nguyệt Băng 多源新闻简报与 Tuần An 学习周报。查看各自工作方式、流程、输入、输出和能力边界。">
   <meta name="theme-color" content="#f4f7f4">
-  <title>Nguyệt Băng · 多源新闻简报 Agent</title>
+  <title>Nguyệt Băng & Tuần An · 两位 Hermes AI 助理</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./layout.css">
 </head>
 <body>
   <main class="document">
-    <header class="page-header">
+    <header class="page-header" id="news-assistant">
       <h1 class="agent-title"><img class="agent-avatar" src="./nguyet-bang-avatar.jpg" alt="Nguyệt Băng 的头像">Nguyệt Băng</h1>
-      <p class="subtitle">多源新闻简报 Agent</p>
-      <p class="intro-line">一位为你收集、核验并整理重要新闻的 AI 助手。</p>
+      <p class="subtitle">多源新闻简报助理 · Profile: <code>news-brief</code></p>
+      <p class="intro-line">这是两位独立 Hermes AI 助理中的第一位；第二位是学习周报助理 Tuần An。</p>
     </header>
 
+    <nav class="profile-nav" aria-label="选择要查看的助理">
+      <a href="#news-assistant">📰 Nguyệt Băng · 多源新闻</a>
+      <a href="#weekly-assistant">📘 Tuần An · 学习周报</a>
+    </nav>
+
     <section class="definition callout">
-      <p><strong>📌 一句话定义：</strong>当收到新闻链接、文章、音频、视频或指定 Lark 学习群的新内容时，Nguyệt Băng 会核对来源、筛选重点并整理成附有原始链接和核验状态的结构化简报。</p>
+      <p><strong>📌 一句话定义：</strong>当收到新闻链接、文章、音频、视频或已授权来源的新内容时，Nguyệt Băng 会核对来源、筛选重点并整理成附有原始链接和核验状态的结构化简报。</p>
     </section>
 
     <section>
       <h2>💡 它是什么</h2>
-      <p><strong>Nguyệt Băng</strong> 是运行在 Hermes Profile 中的新闻整理 Agent，定位为一位多源信息编辑助理。它从新闻网站、官方公告、视频、播客及用户指定的 Lark 学习群中提取重要信息，区分事实、观点与未核实消息，再按主题编排成简报。</p>
-      <p>它帮助你减少逐个打开网页、阅读长文和收听完整音视频的时间。最终判断仍由你掌握；涉及重大风险、信息冲突或证据不足时，Agent 会明确标记并暂停等待人工确认。</p>
+      <p><strong>Nguyệt Băng</strong> 是运行在独立 Hermes Profile 中的多源新闻助理。它从新闻网站、官方公告、视频、播客及用户明确提供或已授权的来源中提取重要信息，区分事实、观点与未核实消息，再按主题编排成简报。</p>
+      <p>它帮助你减少逐个打开网页、阅读长文和收听完整音视频的时间。最终判断仍由你掌握；涉及重大风险、信息冲突或证据不足时，助理会明确标记并暂停等待人工确认。</p>
     </section>
 
     <section>
       <h2>⏱️ 省了什么人工</h2>
       <table>
-        <thead><tr><th>工作内容</th><th>此前的人工流程</th><th>使用 Agent 后</th></tr></thead>
+        <thead><tr><th>工作内容</th><th>此前的人工流程</th><th>使用助理后</th></tr></thead>
         <tbody>
-          <tr><td>查找并阅读资料</td><td>纳入一轮简报的人工流程估算约 170 分钟</td><td>Agent 可协助收集与提炼；实际运行耗时尚未测量</td></tr>
-          <tr><td>核对与归类</td><td>人工检查日期、来源、重复内容和主题</td><td>Agent 按规则预分类、比对并标注状态</td></tr>
-          <tr><td>撰写与排版</td><td>人工整理标题、摘要、出处并编排内容</td><td>Agent 生成结构化草稿，仍需人工抽查重要信息</td></tr>
+          <tr><td>查找并阅读资料</td><td>纳入一轮简报的人工流程估算约 170 分钟</td><td>助理可协助收集与提炼；实际运行耗时尚未测量</td></tr>
+          <tr><td>核对与归类</td><td>人工检查日期、来源、重复内容和主题</td><td>助理按规则预分类、比对并标注状态</td></tr>
+          <tr><td>撰写与排版</td><td>人工整理标题、摘要、出处并编排内容</td><td>助理生成结构化草稿，仍需人工抽查重要信息</td></tr>
           <tr class="total-row"><td>当前结论</td><td>约 170 分钟 / 轮（来自用户估算）</td><td>节省幅度尚未做实测对照，不虚报具体分钟数</td></tr>
         </tbody>
       </table>
@@ -44,9 +49,9 @@
     <section>
       <h2>🛠️ 用了什么工具</h2>
       <div class="tool-list">
-        <article class="tool"><span class="tool-mark codex">C</span><div><h3>Codex</h3><p>协助设计 Agent Profile、工作流程和公开展示页。</p></div></article>
-        <article class="tool"><span class="tool-mark hermes">H</span><div><h3>Hermes Agent</h3><p>承载 Nguyệt Băng 的 Profile、调用已启用工具并执行整理流程。</p></div></article>
-        <article class="tool"><span class="tool-mark lark">L</span><div><h3>Lark Bot + CLI</h3><p>作为消息交付通道；私聊接收与群聊处理仍需完成复测和范围配置。</p></div></article>
+        <article class="tool"><span class="tool-mark codex">C</span><div><h3>Codex</h3><p>协助设计 助理 Profile、工作流程和公开展示页。</p></div></article>
+        <article class="tool"><span class="tool-mark hermes">H</span><div><h3>Hermes 助理 Profile</h3><p>承载 Nguyệt Băng 的独立配置、行为准则和已启用工具。</p></div></article>
+        <article class="tool"><span class="tool-mark lark">L</span><div><h3>Lark（可选渠道）</h3><p>助理身份与消息渠道彼此独立。Lark 的收发能力须单独授权并通过实际测试；本展示页不接入 Lark。</p></div></article>
         <article class="tool"><span class="tool-mark web">↗</span><div><h3>网页浏览工具</h3><p>查找和阅读公开网页；登录墙、付费墙或平台限制可能阻止获取内容。</p></div></article>
       </div>
     </section>
@@ -88,7 +93,7 @@
         <article><h3>⚠️ 待核实消息</h3><p>单独标明初始来源、已知证据和不确定之处；不把未证实内容写成事实。</p></article>
         <article><h3>📎 来源记录</h3><p>保留标题、发布方、作者（如有）、发布日期、原始链接、事件时间（如可确认）与核验状态。</p></article>
       </div>
-      <p class="status-note"><strong>交付状态：</strong>每日 07:00 与周日 19:00 是期望时段，目前尚未配置自动定时任务。Lark Bot 的私聊接收及指定群组范围仍需复测/配置；本页不代表这些自动化已运行。</p>
+      <p class="status-note"><strong>交付状态：</strong>每日 07:00 与周日 19:00 是期望时段，目前尚未验证自动定时任务。本展示不代表任何定时发送或 Lark 收发自动化已经运行。</p>
     </section>
 
     <section>
@@ -107,9 +112,9 @@
 
     <section>
       <h2>🚀 如何触发</h2>
-      <p><strong>手动整理：</strong>在 Hermes 的 <code>news-brief</code> Profile 中提供链接、文件或明确主题，并说明要生成简报、解释内容或整理本周回顾。</p>
+      <p><strong>手动整理：</strong>在 Hermes 的 <code>news-brief</code> Profile 中提供链接、文件或明确主题，并说明要生成简报、解释内容或整理本周新闻回顾。</p>
       <div class="prompt-example"><span>示例指令</span><p>请核验并整理这组新闻链接，按主题输出简报。每条保留发布时间、原始来源和链接；至少区分已核实与待核实信息，不要补写来源没有的内容。</p></div>
-      <p><strong>Lark Bot：</strong>Agent 的 Lark 展示名称为 <strong>Nguyệt Băng</strong>。私聊接收与群聊触发正在复测；使用群聊前须先将对应学习群加入允许范围。</p>
+      <p><strong>Lark 渠道：</strong>Nguyệt Băng 是 Hermes 中运行的 AI 助理，Lark 只是可选消息渠道。自动收发方式尚未验证；请以 Hermes 当前实际连接状态为准。</p>
       <p><strong>定时触发：</strong>每日 07:00 与每周日 19:00 为目标时间，尚未创建定时任务。</p>
     </section>
 
@@ -117,16 +122,114 @@
       <h2>⚠️ 注意事项</h2>
       <ul class="notes">
         <li>重要信息应回到原始来源核对；简报不能替代官方公告或专业判断。</li>
-        <li>遇到来源冲突、证据不足、敏感内容或可能影响人身安全的消息，Agent 会标注“正在核实”并暂停正式发布。</li>
+        <li>遇到来源冲突、证据不足、敏感内容或可能影响人身安全的消息，助理会标注“正在核实”并暂停正式发布。</li>
         <li>音视频内容只有在较长、复杂或需要精确引述时才转写；听不清的部分标记为“[无法听清]”，不自行补全。</li>
         <li>不同媒体若来自同一份通稿或同一上游报道，不计为多份独立证据。</li>
-        <li>本网页是只读静态展示：不接入 Hermes、Lark API 或个人数据，没有聊天输入，也不能由访客调用 Agent。</li>
+        <li>本网页是只读静态展示：不接入 Hermes、Lark API 或个人数据，没有聊天输入，也不能由访客调用助理。</li>
       </ul>
     </section>
 
     <footer class="page-footer">
-      <p>Nguyệt Băng · 多源新闻简报 Agent</p>
+      <p>Nguyệt Băng · 多源新闻简报助理</p>
     </footer>
+
+    <section class="weekly-sheet" id="weekly-assistant" aria-labelledby="weekly-title">
+      <header class="weekly-header">
+        <p class="kicker">第二位独立 Hermes AI 助理</p>
+        <h1 id="weekly-title">Tuần An</h1>
+        <p class="subtitle">学习周报助理 · Profile: <code>weekly-report</code></p>
+        <p class="intro-line">把本周已提供或已授权的课程资料和任务记录整理成可核对的学习周报。</p>
+      </header>
+
+      <section class="definition callout">
+        <p><strong>📌 一句话定义：</strong>当收到一周的课程通知、学习资料、任务清单或进度记录时，Tuần An 会提取并核对事实，归并重复事项，输出包含完成情况、待办、截止日期和下周重点的学习周报。</p>
+      </section>
+
+      <section>
+        <h2>💡 它是什么</h2>
+        <p><strong>Tuần An</strong> 是独立 Hermes Profile <code>weekly-report</code> 中的个人学习助理。它只处理用户提供或明确授权的资料，帮助回顾本周学习事项并规划下一周。它与 Nguyệt Băng 是两个不同的 Profile：一个整理学习周报，一个整理多源新闻。</p>
+        <p>本展示页是只读介绍，不会读取个人课程记录。没有输入的学习成果不会被推测或编造。</p>
+      </section>
+
+      <section>
+        <h2>⏱️ 省了什么人工</h2>
+        <table><thead><tr><th>工作内容</th><th>此前的人工流程</th><th>使用助理后</th></tr></thead>
+          <tbody>
+            <tr><td>回看本周资料</td><td>在用户提供的通知、任务和笔记中逐项找信息</td><td>集中提取课程事项、日期、状态和来源</td></tr>
+            <tr><td>整理待办</td><td>手动合并重复通知并找出临近截止事项</td><td>归并重复内容，按日期和用户优先级列出</td></tr>
+            <tr><td>写周报</td><td>自行归纳完成事项、未完成事项和下周安排</td><td>生成可核对的周报草稿，未知状态保留为待确认</td></tr>
+            <tr class="total-row"><td>当前结论</td><td>尚无用户提供的单次耗时数据</td><td>节省时间尚未实测，不虚报具体分钟数</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>🛠️ 用了什么工具</h2>
+        <div class="tool-list">
+          <article class="tool"><span class="tool-mark codex">C</span><div><h3>Codex</h3><p>协助梳理流程、编写 Profile 指令及维护公开说明页。</p></div></article>
+          <article class="tool"><span class="tool-mark hermes">H</span><div><h3>Hermes 助理 Profile</h3><p>以独立 Profile <code>weekly-report</code> 保存 Tuần An 的行为规则。</p></div></article>
+          <article class="tool"><span class="tool-mark lark">L</span><div><h3>用户资料与 Lark（条件式）</h3><p>可处理用户提供的内容。Lark 群组读取只有在授权、限定群组并验证后才可用；当前页面不连接接口。</p></div></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>📥 输入</h2>
+        <table><thead><tr><th>输入</th><th>内容</th><th>格式/来源</th></tr></thead><tbody>
+          <tr><td>课程通知与群消息</td><td>上课安排、作业要求、截止日期、重要提醒</td><td>用户粘贴的文本、链接、已授权群组导出</td></tr>
+          <tr><td>学习任务与进度</td><td>课程、任务、明确记载的完成状态和个人计划</td><td>文本、DOCX、PDF、表格或任务清单</td></tr>
+          <tr><td>学习资料</td><td>本周共享的讲义、参考文件与学习笔记</td><td>链接、PDF、DOCX、PPTX、图片</td></tr>
+          <tr><td>报告要求</td><td>周期、课程范围、输出格式及是否需要后续安排</td><td>Hermes 对话中的明确指令</td></tr>
+        </tbody></table>
+      </section>
+
+      <section>
+        <h2>⚙️ 标准工作流程</h2>
+        <ol class="workflow">
+          <li><span class="rule must">MUST</span><span>接收输入并确认报告周期、课程范围及来源是否在授权范围内；超范围资料不读取。</span></li>
+          <li><span class="rule must">MUST</span><span>提取课程、任务、截止日期、状态、通知、资料和出处；保留文件名、时间戳或链接以便回查。</span></li>
+          <li><span class="rule must">MUST</span><span>合并重复任务，区分明确事实、用户自述和待确认信息；来源相互冲突时保留差异。</span></li>
+          <li><span class="rule must">MUST</span><span>只按输入证据标记已完成/进行中/未完成；缺少状态或日期时标记“待确认/未提供”。</span></li>
+          <li><span class="rule should">SHOULD</span><span>归纳本周完成、未完成、重要资料与通知、需要确认的事项及下周优先任务。</span></li>
+          <li><span class="rule must">MUST</span><span>复核日期、课程、任务状态、来源、重复项、矛盾和隐私；不编造学习成果或计划。</span></li>
+          <li><span class="rule must">MUST</span><span>按用户指定格式交付；只有真实写入或发送成功后才报告已保存/已发送。</span></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>📤 输出示例</h2>
+        <div class="prompt-example"><span>静态示例格式（非真实用户数据）</span><p><strong>学习周报（日期范围）</strong><br>本周完成：仅列出来源明确记录已完成的事项。<br>进行中/未完成：课程 · 任务 · 截止日期 · 当前状态。<br>重要通知与资料：摘要及原始链接/文件名。<br>待确认：输入中缺失或存在冲突的信息。<br>下周重点：按截止日期与用户给定优先级排列。</p></div>
+        <p class="status-note"><strong>运行状态：</strong>Profile <code>weekly-report</code> 已创建并写入行为说明。此处没有展示实时执行截图；定时生成、Lark 自动读取/发送尚未验证，因此不能据此视为已启用。</p>
+      </section>
+
+      <section>
+        <h2>✅ 能做什么 / ❌ 不能做什么</h2>
+        <table><thead><tr><th>✅ 能做</th><th>❌ 不能做</th></tr></thead><tbody>
+          <tr><td>从实际输入中整理任务、状态、日期和来源</td><td>不能凭空补出成绩、完成情况、截止日期或学习活动</td></tr>
+          <tr><td>合并重复消息并标出冲突和缺失信息</td><td>不能把未确认的状态改写成已完成</td></tr>
+          <tr><td>给出清晰的周报草稿和下周待办清单</td><td>不能替用户认领任务或修改来源文件/日历</td></tr>
+          <tr><td>在完成授权和测试后处理指定来源</td><td>不能监控未选群组或私人聊天，也不能擅自对外发送</td></tr>
+        </tbody></table>
+      </section>
+
+      <section>
+        <h2>🚀 如何使用</h2>
+        <p>在 Hermes 中切换到 <code>weekly-report</code> Profile，提供本周资料并说明日期范围，然后要求“整理本周学习周报”。例如：</p>
+        <div class="prompt-example"><span>示例指令</span><p>请根据我发来的本周课程通知、任务和笔记，生成学习周报。逐项保留来源和截止日期；完成状态不明确的标记待确认；最后按紧急程度列出下周待办。不要访问其他群或补写未提供的信息。</p></div>
+        <p><strong>定时与 Lark：</strong>周日 19:00 是期望时间，不代表定时任务已安装。若要使用自动读取或发送，需要先配置明确的授权范围并完成端到端测试。</p>
+      </section>
+
+      <section>
+        <h2>⚠️ 注意事项与边界</h2>
+        <ul class="notes">
+          <li>报告只涵盖实际收到且成功读取的资料；输入不完整时会标明覆盖范围。</li>
+          <li>存在状态、日期或课程归属冲突时，保留来源并请求用户确认。</li>
+          <li>只处理用户提供或明确授权的资料和所选群组。</li>
+          <li>本网页是无接口的静态只读介绍，不连接 Hermes、Lark 或账户数据，访客无法调用助理。</li>
+        </ul>
+      </section>
+
+      <footer class="page-footer"><p>Tuần An · 学习周报助理</p><p>Hermes Profile: weekly-report</p></footer>
+    </section>
   </main>
 </body>
 </html>
